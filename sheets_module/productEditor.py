@@ -1,18 +1,29 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+# import gspread
 from googleapiclient.discovery import build
 from httplib2 import Http
 from oauth2client import file, client, tools
+# from oauth2client.service_account import ServiceAccountCredentials
 
-# If modifying these scopes, delete the file token.json.
 SCOPES = 'https://www.googleapis.com/auth/spreadsheets'
+# scope = ['https://spreadsheets.google.com/feeds',
+#          'https://www.googleapis.com/auth/drive']
+#
+# credentials = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
+#
+# gc = gspread.authorize(credentials)
+#
+# wks = gc.open('try').sheet1
 
-class SheetEditor:
+
+class ProductEditor:
 
     sheet = ""
 
-    def __init__(self, spreadsheet):
+    def __init__(self, spreadsheet, product_name):
+        self.product = product_name
         store = file.Storage('token.json')
         #  store = file.Storage('token.json')
         creds = store.get()

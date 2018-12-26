@@ -1,21 +1,18 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
-__author__ = 'shay@inbar.co.il'
 
 import datetime
-from Docs.SheetEditor import SheetEditor
+import productEditor
 
 # The ID and range of a sample spreadsheet.
-DUTY_SPREADSHEET_ID = '1eP3P_90DzUbl8VVcNahi9ZJ2NMZ9FDvoP5ygcaqmpqE'
-
-LIST_SPREADSHEET_ID = '1BfOz68K0v7al4uZ21rOBkiW2OseG4_dpyHjL4NjbwNA'
+PRODUCT_SPREADSHEET_ID = '1eP3P_90DzUbl8VVcNahi9ZJ2NMZ9FDvoP5ygcaqmpqE'
 
 class DocsManager:
 
     # service - GOOGLE SHEETS API
 
-    def __init__(self, week, sunday):
+    def __init__(self, products):
+        self.__products = ProductEditor[]
+        for i in range(len(products)):
+            self.__products =
         self.__load_service()
         self.week = week
         self.sunday = sunday
