@@ -6,7 +6,7 @@ import time
 
 is_BCM = True  # GPIO numbering - True for GPIO.BCM, False for GPIO.BOARD
 button_numbers = {  # dictionary with all GPIO numbers (BCM / BOARD)
-    5: "Green Button", 7: "White Button" , 11: "Grey Button", 13: "Yellow Button"
+    5: "Green Button", 7: "White Button", 11: "Grey Button", 13: "Yellow Button"
 }
 buff = 0.05  # buffer time between inputs (in seconds)
 
